@@ -8,7 +8,7 @@ namespace Domain.Entities
     public class PersonalData
     {
         [Key]
-        public int Id { get; set; } // Guid in the future
+        public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
