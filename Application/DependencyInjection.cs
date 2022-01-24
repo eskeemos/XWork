@@ -10,6 +10,7 @@ namespace Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddScoped<ISPersonalData, PersonalDataServ>();
+            services.AddScoped<ISLocation, LocationServ>();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             return services;

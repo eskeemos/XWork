@@ -1,4 +1,6 @@
 C:\Users\Lukasz\source\repos\XWork\Infrastucture\bin\Debug\net5.0\Infrastucture.deps.json
+C:\Users\Lukasz\source\repos\XWork\Infrastucture\bin\Debug\net5.0\Infrastucture.runtimeconfig.json
+C:\Users\Lukasz\source\repos\XWork\Infrastucture\bin\Debug\net5.0\Infrastucture.runtimeconfig.dev.json
 C:\Users\Lukasz\source\repos\XWork\Infrastucture\bin\Debug\net5.0\Infrastucture.dll
 C:\Users\Lukasz\source\repos\XWork\Infrastucture\bin\Debug\net5.0\ref\Infrastucture.dll
 C:\Users\Lukasz\source\repos\XWork\Infrastucture\bin\Debug\net5.0\Infrastucture.pdb
@@ -13,6 +15,4 @@ C:\Users\Lukasz\source\repos\XWork\Infrastucture\obj\Debug\net5.0\Infrastucture.
 C:\Users\Lukasz\source\repos\XWork\Infrastucture\obj\Debug\net5.0\Infrastucture.dll
 C:\Users\Lukasz\source\repos\XWork\Infrastucture\obj\Debug\net5.0\ref\Infrastucture.dll
 C:\Users\Lukasz\source\repos\XWork\Infrastucture\obj\Debug\net5.0\Infrastucture.pdb
-C:\Users\Lukasz\source\repos\XWork\Infrastucture\bin\Debug\net5.0\Infrastucture.runtimeconfig.json
-C:\Users\Lukasz\source\repos\XWork\Infrastucture\bin\Debug\net5.0\Infrastucture.runtimeconfig.dev.json
 C:\Users\Lukasz\source\repos\XWork\Infrastucture\obj\Debug\net5.0\Infrastucture.genruntimeconfig.cache
