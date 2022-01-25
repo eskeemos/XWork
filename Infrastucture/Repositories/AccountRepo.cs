@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
 using Infrastucture.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,24 +24,34 @@ namespace Infrastucture.Repositories
             return account;
         }
 
-        //public IEnumerable<Account> Get()
-        //{
-        //    return datas;
-        //}
+        public IEnumerable<Account> Get()
+        {
+            return context.Account
+                .Include(x => x.PersonalData)
+                .Include(x => x.Location)
+                .ToList();
+        }
 
-        //public Account GetById(int id)
-        //{
-        //    return datas.SingleOrDefault(x => x.Id == id);
-        //}
+        public Account GetById(int id)
+        {
+            return context.Account
+                .Include(x => x.PersonalData)
+                .Include(x => x.Location)
+                .SingleOrDefault(x => x.Id == id);
+        }
 
-        //public void Remove(int id)
-        //{
-        //    datas.Remove(GetById(id));
-        //}
+        public void Remove(int id)
+        {
+            context.Account.Remove(GetById(id));
+            context.SaveChanges();
+        }
 
-        //public void Update(Account client)
-        //{
-        //    var x = client;
-        //}
+        public void Update(Account account)
+        {
+            var data = GetById(account.Id);
+            if (data is null) return;
+            data.Password = account.Password;
+            context.SaveChanges();
+        }
     }
 }

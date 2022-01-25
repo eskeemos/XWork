@@ -29,24 +29,25 @@ namespace Application.Services
             return mapper.Map<AccountInfo>(data);
         }
 
-        //public IEnumerable<AccountDto> Get()
-        //{
-        //    return mapper.Map<IEnumerable<AccountDto>>(repo.Get());
-        //}
+        public IEnumerable<AccountInfo> GetAccounts()
+        {
+            var data = repo.Get();
+            return mapper.Map<IEnumerable<AccountInfo>>(data);
+        }
 
-        //public UpdateAccountDto GetClientById(int id)
-        //{
-        //    return mapper.Map<UpdateAccountDto>(repo.GetById(id));
-        //}
+        public AccountInfo GetAccountById(int id)
+        {
+            return mapper.Map<AccountInfo>(repo.GetById(id));
+        }
 
-        //public void RemoveClient(int id)
-        //{
-        //    repo.Remove(id);
-        //}   
+        public void RemoveAccount(int id)
+        {
+            repo.Remove(id);
+        }
 
-        //public void UpdateClient(UpdateAccountDto client)
-        //{
-        //    repo.Update(mapper.Map<Account>(client));
-    //}
+        public void UpdateAccount(AccountUpdate account)
+        {
+            repo.Update(mapper.Map<Account>(account));
+        }
     }
 }

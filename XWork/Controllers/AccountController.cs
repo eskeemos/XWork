@@ -16,16 +16,18 @@ namespace XWork.Controllers
         {
             this.serv = serv;
         }
-        //[HttpGet]
-        //public ActionResult<IEnumerable<UpdateAccountDto>> Get()
-        //{
-        //    return Ok(serv.Get());
-        //}
-        //[HttpGet("{id}")]
-        //public ActionResult<AccountDto> GetById([FromRoute] int id)
-        //{
-        //    return Ok(serv.GetClientById(id));
-        //}
+        [HttpGet]
+        public ActionResult<IEnumerable<AccountInfo>> Get()
+        {
+            return Ok(serv.GetAccounts());
+        }
+        [HttpGet("{id}")]
+        public ActionResult<AccountInfo> GetById([FromRoute] int id)
+        {
+            var account = serv.GetAccountById(id);
+            if (account is null) return null;
+            return Ok(account);
+        }
         [HttpPost]
         public ActionResult<AccountInfo> Add(AccountCreate client)
         {
@@ -33,17 +35,20 @@ namespace XWork.Controllers
 
             return Created($"/api/client/{data.Id}", data);
         }
-        //[HttpDelete("{id}")]
-        //public IActionResult Remove([FromRoute] int id)
-        //{
-        //    serv.RemoveClient(id);
-        //    return NoContent();
-        //}
-        //[HttpPut]
-        //public IActionResult Update([FromBody] UpdateAccountDto client)
-        //{
-        //    serv.UpdateClient(client);
-        //    return NoContent();
-        //}
+        [HttpDelete("{id}")]
+        public IActionResult Remove([FromRoute] int id)
+        {
+            var account = serv.GetAccountById(id);
+            if(account is null) return NotFound();
+
+            serv.RemoveAccount(id);
+            return NoContent();
+        }
+        [HttpPut]
+        public IActionResult Update([FromBody] AccountUpdate client)
+        {
+            serv.UpdateAccount(client);
+            return NoContent();
+        }
     }
 }
