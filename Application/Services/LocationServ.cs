@@ -16,19 +16,9 @@ namespace Application.Services
             this.mapper = mapper;
             this.repo = repo;
         }
-        public UpdateLocationDto Add(LocationDto location)
-        {
-            var data = repo.Add(mapper.Map<Location>(location));
-            return mapper.Map<UpdateLocationDto>(data);
-        }
 
         public LocationDto GetLocationById(int id)
             => mapper.Map<LocationDto>(repo.GetById(id));
-
-        public void Remove(int id)
-        {
-            repo.Remove(id);
-        }
 
         public void Update(UpdateLocationDto location)
         {

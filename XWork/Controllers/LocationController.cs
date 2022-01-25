@@ -27,18 +27,6 @@ namespace XWork.Controllers
             if (location is null) return NotFound();
             return Ok(location);
         }
-        [HttpPost]
-        public ActionResult<UpdateLocationDto> Add([FromBody] LocationDto location)
-        {
-            var data = serv.Add(location);
-            return Created($"/api/Location/{data.Id}", data);
-        }
-        [HttpDelete("{id}")]
-        public IActionResult Remove([FromRoute] int id)
-        {
-            serv.Remove(id);
-            return NoContent();
-        }
         [HttpPut]
         public IActionResult Update([FromBody] UpdateLocationDto location)
         {

@@ -17,20 +17,9 @@ namespace Application.Services
             this.mapper = mapper;
         }
 
-        public UpdatePersonalDataDto Add(PersonalDataDto personalData)
-        {
-            var data = repo.Add(mapper.Map<PersonalData>(personalData));
-            return mapper.Map<UpdatePersonalDataDto>(data);
-        }
-
         public PersonalDataDto GetPDById(int id)
         {
             return mapper.Map<PersonalDataDto>(repo.GetById(id));
-        }
-
-        public void RemovePD(int id)
-        {
-            repo.Remove(id);
         }
 
         public void UpdatePD(UpdatePersonalDataDto personalData)
