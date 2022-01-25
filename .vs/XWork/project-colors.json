@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5d1ef296-261a-45ef-81a2-42b6cd19abb8": {
+      "ProjectGuid": "5d1ef296-261a-45ef-81a2-42b6cd19abb8",
+      "DisplayName": "Domain",
+      "ColorIndex": 0
+    },
+    "aaf0a3b6-4550-4af8-8ed1-cd09e386d5ef": {
+      "ProjectGuid": "aaf0a3b6-4550-4af8-8ed1-cd09e386d5ef",
+      "DisplayName": "Infrastucture",
+      "ColorIndex": 1
+    },
+    "2defae4e-6719-4e79-9ca2-f2e84b622d2a": {
+      "ProjectGuid": "2defae4e-6719-4e79-9ca2-f2e84b622d2a",
+      "DisplayName": "XWork",
+      "ColorIndex": 2
+    },
+    "0e34f2c9-0365-4ca6-8c01-515e2bee216d": {
+      "ProjectGuid": "0e34f2c9-0365-4ca6-8c01-515e2bee216d",
+      "DisplayName": "Application",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
