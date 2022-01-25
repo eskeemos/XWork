@@ -8,7 +8,6 @@ namespace Application.Dtos
     {
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string Email { get; set; }
         public string Phone { get; set; }
         public string Pesel { get; set; }
         public bool SanitaryBook { get; set; }

@@ -10,6 +10,7 @@ namespace Infrastucture
         {
             services.AddScoped<IRPersonalData, PersonalDataRepo>();
             services.AddScoped<IRLocation, LocationRepo>();
+            services.AddScoped<IRClient, ClientRepo>();
             return services;
         }
     }

@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XWork", "XWork\XWork.csproj", "{2DEFAE4E-6719-4E79-9CA2-F2E84B622D2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XWork", "XWork\XWork.csproj", "{2DEFAE4E-6719-4E79-9CA2-F2E84B622D2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{0E34F2C9-0365-4CA6-8C01-515E2BEE216D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{0E34F2C9-0365-4CA6-8C01-515E2BEE216D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{5D1EF296-261A-45EF-81A2-42B6CD19ABB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{5D1EF296-261A-45EF-81A2-42B6CD19ABB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture", "Infrastucture\Infrastucture.csproj", "{AAF0A3B6-4550-4AF8-8ED1-CD09E386D5EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastucture", "Infrastucture\Infrastucture.csproj", "{AAF0A3B6-4550-4AF8-8ED1-CD09E386D5EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DA05F10C-5FCF-455A-89BB-922BC732247E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

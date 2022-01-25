@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Domain.Entities
+﻿namespace Domain.Entities
 {
     public class Location
     {
-        [Key]
         public int Id { get; set; }
         public string Voivodeship { get; set; }
         public string County { get; set; }
