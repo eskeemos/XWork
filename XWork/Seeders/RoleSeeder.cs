@@ -33,10 +33,6 @@ namespace XWork.Seeders
                 new Role()
                 {
                     Name = "User"
-                },
-                new Role()
-                {
-                    Name = "Admin"
                 }
             };
 

@@ -16,7 +16,6 @@ namespace Application
             services.AddScoped<ISPersonalData, PersonalDataServ>();
             services.AddScoped<ISLocation, LocationServ>();
             services.AddScoped<ISAccount, AccountServ>();
-            services.AddScoped<ISUser, UserServ>();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             return services;

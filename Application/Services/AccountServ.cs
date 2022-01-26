@@ -1,5 +1,6 @@
 ﻿using Application.Dtos;
 using Application.Dtos.AccountDtos;
+using Application.Dtos.UserDtos;
 using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
@@ -48,6 +49,17 @@ namespace Application.Services
         public void UpdateAccount(AccountUpdate account)
         {
             repo.Update(mapper.Map<Account>(account));
+        }
+
+        public int PostUser(UserRegisterDto dto)
+        {
+            var id = repo.Post(mapper.Map<User>(dto));
+            return id;
+        }
+
+        public string GenerateJwt(UserLoginDto dto)
+        {
+            return repo.GetJwt(mapper.Map<User>(dto));
         }
     }
 }

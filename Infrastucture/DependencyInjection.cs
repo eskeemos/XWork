@@ -12,7 +12,6 @@ namespace Infrastucture
             services.AddScoped<IRPersonalData, PersonalDataRepo>();
             services.AddScoped<IRLocation, LocationRepo>();
             services.AddScoped<IRAccount, AccountRepo>();
-            services.AddScoped<IRUser, UserRepo>();
             return services;
         }
     }

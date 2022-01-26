@@ -10,5 +10,7 @@ namespace Domain.Interfaces
         int Add(Account client);
         void Update(Account client);
         void Remove(int id);
+        int Post(User user);
+        string GetJwt(User user);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Application.Dtos;
 using Application.Dtos.AccountDtos;
+using Application.Dtos.UserDtos;
 using System.Collections.Generic;
 
 namespace Application.Interfaces
@@ -11,5 +12,7 @@ namespace Application.Interfaces
         int AddAccount(AccountCreate location);
         void UpdateAccount(AccountUpdate location);
         void RemoveAccount(int id);
+        int PostUser(UserRegisterDto dto);
+        string GenerateJwt(UserLoginDto dto);
     }
 }
