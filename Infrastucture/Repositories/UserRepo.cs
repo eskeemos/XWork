@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
@@ -40,11 +41,21 @@ namespace Infrastucture.Repositories
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("Authentication")["JwtKey"]));
+            var cfg = configuration.GetSection("Authentication");
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(cfg["JwtKey"]));
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            //var c = configuration.GetSection("Authentication")["JwtKey"];
-            //var expires = DateTime.Now.AddDays(c);
-            return "";
+            var expires = DateTime.Now.AddDays(int.Parse(cfg["ExpireDays"].ToString()));
+
+            var token = new JwtSecurityToken(
+                cfg["Issuer"],
+                cfg["Issuer"],
+                claims,
+                expires : expires,
+                signingCredentials : cred);
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            return tokenHandler.WriteToken(token);
         }
 
         public int Post(User user)

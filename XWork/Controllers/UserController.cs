@@ -24,7 +24,7 @@ namespace XWork.Controllers
         public ActionResult Login([FromBody] UserLoginDto dto)
         {
             string token = serv.GenerateJwt(dto);
-            return Ok();
+            return Ok(token);
         }
     }
 }
