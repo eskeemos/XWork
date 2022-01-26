@@ -9,7 +9,13 @@ C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\ref\XWork.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\XWork.pdb
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -18,6 +24,7 @@ C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.EntityFramew
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.Identity.Client.dll
@@ -27,7 +34,6 @@ C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.IdentityMode
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -70,3 +76,4 @@ C:\Users\Lukasz\source\repos\XWork\XWork\obj\Debug\net5.0\XWork.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\obj\Debug\net5.0\ref\XWork.dll
 C:\Users\Lukasz\source\repos\XWork\XWork\obj\Debug\net5.0\XWork.pdb
 C:\Users\Lukasz\source\repos\XWork\XWork\obj\Debug\net5.0\XWork.genruntimeconfig.cache
+C:\Users\Lukasz\source\repos\XWork\XWork\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,10 +1,6 @@
 ﻿using Application;
-using Application.Interfaces;
-using Application.Mapper;
-using Application.Services;
-using Domain.Interfaces;
+using FluentValidation.AspNetCore;
 using Infrastucture;
-using Infrastucture.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +12,7 @@ namespace XWork.Installers
         {
             services.AddInfrastructure();
             services.AddApplication();
+            services.AddControllers().AddFluentValidation();
             services.AddControllers();
         }
     }
