@@ -16,9 +16,9 @@ namespace XWork.Installers
 
             services.AddAuthentication(x =>
             {
-                x.DefaultAuthenticateScheme = "XWork";
-                x.DefaultScheme = "XWork";
-                x.DefaultChallengeScheme = "XWork";
+                x.DefaultAuthenticateScheme = "Bearer";
+                x.DefaultScheme = "Bearer";
+                x.DefaultChallengeScheme = "Bearer";
             }).AddJwtBearer(x =>
             {
                 x.RequireHttpsMetadata = false;
