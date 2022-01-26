@@ -1,6 +1,5 @@
 ﻿using Application.Dtos;
 using Application.Dtos.AccountDtos;
-using Application.Dtos.UserDtos;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,13 +18,13 @@ namespace XWork.Controllers
             this.serv = serv;
         }
         [HttpPost("register")]
-        public ActionResult<int> Register([FromBody] UserRegisterDto dto)
+        public ActionResult<int> Register([FromBody] AccountRegister dto)
         {
             var id = serv.PostUser(dto);
             return Ok(id);
         }
         [HttpPost("login")]
-        public ActionResult Login([FromBody] UserLoginDto dto)
+        public ActionResult Login([FromBody] AccountLogin dto)
         {
             string token = serv.GenerateJwt(dto);
             return Ok(token);
@@ -41,13 +40,6 @@ namespace XWork.Controllers
             var account = serv.GetAccountById(id);
             if (account is null) return null;
             return Ok(account);
-        }
-        [HttpPost]
-        public ActionResult<int> Add(AccountCreate client)
-        {
-            var id = serv.AddAccount(client);
-
-            return Ok(id);
         }
         [HttpDelete("{id}")]
         public IActionResult Remove([FromRoute] int id)

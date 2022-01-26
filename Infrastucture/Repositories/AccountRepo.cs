@@ -17,22 +17,14 @@ namespace Infrastucture.Repositories
     public class AccountRepo : IRAccount
     {
         private readonly Context context;
-        private readonly IPasswordHasher<User> hasher;
+        private readonly IPasswordHasher<Account> hasher;
         private readonly IConfiguration configuration;
 
-        public AccountRepo(Context context, IPasswordHasher<User> hasher, IConfiguration configuration)
+        public AccountRepo(Context context, IPasswordHasher<Account> hasher, IConfiguration configuration)
         {
             this.context = context;
             this.hasher = hasher;
             this.configuration = configuration;
-        }
-
-        public int Add(Account account)
-        {
-            context.Account.Add(account);
-            context.SaveChanges();
-
-            return account.Id;
         }
 
         public IEnumerable<Account> Get()
@@ -51,19 +43,19 @@ namespace Infrastucture.Repositories
                 .SingleOrDefault(x => x.Id == id);
         }
 
-        public string GetJwt(User user)
+        public string GetJwt(Account account)
         {
-            var mail = context.User.SingleOrDefault(x => x.Email == user.Email);
+            var mail = context.Account.SingleOrDefault(x => x.Email == account.Email);
 
             if (mail is null) return "User with this email don't exists";
 
-            var res = hasher.VerifyHashedPassword(user, mail.Password, user.Password);
+            var res = hasher.VerifyHashedPassword(account, mail.Password, account.Password);
 
             if (res == PasswordVerificationResult.Failed) return "Incorrect Password";
 
             var claims = new List<Claim>()
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                new Claim(ClaimTypes.NameIdentifier, account.Id.ToString())
             };
 
             var cfg = configuration.GetSection("Authentication");
@@ -83,16 +75,16 @@ namespace Infrastucture.Repositories
             return tokenHandler.WriteToken(token);
         }
 
-        public int Post(User user)
+        public int Post(Account account)
         {
-            if (user.RoleId == 0) user.RoleId = 1;
+            if (account.RoleId == 0) account.RoleId = 1;
 
-            var hashedPassword = hasher.HashPassword(user, user.Password);
-            user.Password = hashedPassword;
+            var hashedPassword = hasher.HashPassword(account, account.Password);
+            account.Password = hashedPassword;
 
-            context.User.Add(user);
+            context.Account.Add(account);
             context.SaveChanges();
-            return user.Id;
+            return account.Id;
         }
 
         public void Remove(int id)

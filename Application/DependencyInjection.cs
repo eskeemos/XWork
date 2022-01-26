@@ -1,4 +1,4 @@
-﻿using Application.Dtos.UserDtos;
+﻿using Application.Dtos.AccountDtos;
 using Application.Dtos.Validators;
 using Application.Interfaces;
 using Application.Services;
@@ -12,7 +12,7 @@ namespace Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddScoped<IValidator<UserRegisterDto>, UserRegisterValidator>();
+            services.AddScoped<IValidator<AccountRegister>, UserRegisterValidator>();
             services.AddScoped<ISPersonalData, PersonalDataServ>();
             services.AddScoped<ISLocation, LocationServ>();
             services.AddScoped<ISAccount, AccountServ>();

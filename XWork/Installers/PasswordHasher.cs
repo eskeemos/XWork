@@ -9,7 +9,7 @@ namespace XWork.Installers
     {
         public void InstallServ(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();  
+            services.AddScoped<IPasswordHasher<Account>, PasswordHasher<Account>>();  
         }
     }
 }

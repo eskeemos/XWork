@@ -7,10 +7,9 @@ namespace Domain.Interfaces
     {
         IEnumerable<Account> Get();
         Account GetById(int id);
-        int Add(Account client);
         void Update(Account client);
         void Remove(int id);
-        int Post(User user);
-        string GetJwt(User user);
+        int Post(Account user);
+        string GetJwt(Account user);
     }
 }

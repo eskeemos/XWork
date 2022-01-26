@@ -9,7 +9,6 @@ namespace Infrastucture.Data
         public DbSet<PersonalData> PersonalData { get; set; }
         public DbSet<Location> Location { get; set; }
         public DbSet<Account> Account { get; set; }
-        public DbSet<User> User { get; set; }
         public DbSet<Role> Role { get; set; }
     }
 }

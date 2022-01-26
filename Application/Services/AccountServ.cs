@@ -1,6 +1,5 @@
 ﻿using Application.Dtos;
 using Application.Dtos.AccountDtos;
-using Application.Dtos.UserDtos;
 using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
@@ -24,12 +23,6 @@ namespace Application.Services
             this.mapper = mapper;
         }
 
-        public int AddAccount(AccountCreate account)
-        {
-            var data = repo.Add(mapper.Map<Account>(account));
-            return data;
-        }
-
         public IEnumerable<AccountInfo> GetAccounts()
         {
             var data = repo.Get();
@@ -51,15 +44,15 @@ namespace Application.Services
             repo.Update(mapper.Map<Account>(account));
         }
 
-        public int PostUser(UserRegisterDto dto)
+        public int PostUser(AccountRegister dto)
         {
-            var id = repo.Post(mapper.Map<User>(dto));
+            var id = repo.Post(mapper.Map<Account>(dto));
             return id;
         }
 
-        public string GenerateJwt(UserLoginDto dto)
+        public string GenerateJwt(AccountLogin dto)
         {
-            return repo.GetJwt(mapper.Map<User>(dto));
+            return repo.GetJwt(mapper.Map<Account>(dto));
         }
     }
 }
