@@ -16,12 +16,12 @@ namespace Infrastucture.Repositories
             this.context = context;
         }
 
-        public Account Add(Account account)
+        public int Add(Account account)
         {
             context.Account.Add(account);
             context.SaveChanges();
 
-            return account;
+            return account.Id;
         }
 
         public IEnumerable<Account> Get()

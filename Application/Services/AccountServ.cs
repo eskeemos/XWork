@@ -23,10 +23,10 @@ namespace Application.Services
             this.mapper = mapper;
         }
 
-        public AccountInfo AddAccount(AccountCreate account)
+        public int AddAccount(AccountCreate account)
         {
             var data = repo.Add(mapper.Map<Account>(account));
-            return mapper.Map<AccountInfo>(data);
+            return data;
         }
 
         public IEnumerable<AccountInfo> GetAccounts()

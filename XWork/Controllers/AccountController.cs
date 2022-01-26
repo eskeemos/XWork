@@ -29,11 +29,11 @@ namespace XWork.Controllers
             return Ok(account);
         }
         [HttpPost]
-        public ActionResult<AccountInfo> Add(AccountCreate client)
+        public ActionResult<int> Add(AccountCreate client)
         {
-            var data = serv.AddAccount(client);
+            var id = serv.AddAccount(client);
 
-            return Created($"/api/client/{data.Id}", data);
+            return Ok(id);
         }
         [HttpDelete("{id}")]
         public IActionResult Remove([FromRoute] int id)

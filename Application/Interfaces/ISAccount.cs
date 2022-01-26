@@ -8,7 +8,7 @@ namespace Application.Interfaces
     {
         IEnumerable<AccountInfo> GetAccounts();
         AccountInfo GetAccountById(int id);
-        AccountInfo AddAccount(AccountCreate location);
+        int AddAccount(AccountCreate location);
         void UpdateAccount(AccountUpdate location);
         void RemoveAccount(int id);
     }
