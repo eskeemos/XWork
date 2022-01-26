@@ -7,7 +7,6 @@ namespace XWork.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class PersonalDataController : ControllerBase
     {
         private readonly ISPersonalData serv;

@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Entities.Helpers;
 using Domain.Interfaces;
 using Infrastucture.Data;
 using Microsoft.AspNetCore.Identity;
@@ -43,15 +44,16 @@ namespace Infrastucture.Repositories
                 .SingleOrDefault(x => x.Id == id);
         }
 
-        public string GetJwt(Account account)
+        public LogData Login(Account account)
         {
             var mail = context.Account.SingleOrDefault(x => x.Email == account.Email);
 
-            if (mail is null) return "User with this email don't exists";
+            if (mail is null) return new LogData() { Error = "User with this email don't exists" };
 
             var res = hasher.VerifyHashedPassword(account, mail.Password, account.Password);
 
-            if (res == PasswordVerificationResult.Failed) return "Incorrect Password";
+            if (res == PasswordVerificationResult.Failed)
+                return new LogData() { Error = "Incorrect Password" };
 
             var claims = new List<Claim>()
             {
@@ -72,7 +74,15 @@ namespace Infrastucture.Repositories
 
             var tokenHandler = new JwtSecurityTokenHandler();
 
-            return tokenHandler.WriteToken(token);
+            var JWT = tokenHandler.WriteToken(token);
+            var Id = context.Account
+                .SingleOrDefault(x => x.Email == account.Email).Id;
+            var Name = context.Account
+                .Include(x => x.PersonalData)
+                .SingleOrDefault(x => x.Email == account.Email)
+                .PersonalData.Name;
+
+            return new LogData() { Id = Id, JWT = JWT, Name = Name };
         }
 
         public int Post(Account account)

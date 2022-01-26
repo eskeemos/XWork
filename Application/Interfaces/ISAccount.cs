@@ -1,5 +1,5 @@
-﻿using Application.Dtos;
-using Application.Dtos.AccountDtos;
+﻿using Application.Dtos.AccountDtos;
+using Domain.Entities.Helpers;
 using System.Collections.Generic;
 
 namespace Application.Interfaces
@@ -11,6 +11,6 @@ namespace Application.Interfaces
         void UpdateAccount(AccountUpdate location);
         void RemoveAccount(int id);
         int PostUser(AccountRegister dto);
-        string GenerateJwt(AccountLogin dto);
+        LogData LogToAccount(AccountLogin dto);
     }
 }

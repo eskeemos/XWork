@@ -26,8 +26,8 @@ namespace XWork.Controllers
         [HttpPost("login")]
         public ActionResult Login([FromBody] AccountLogin dto)
         {
-            string token = serv.GenerateJwt(dto);
-            return Ok(token);
+            var data = serv.LogToAccount(dto);
+            return Ok(data);
         }
         [HttpGet]
         public ActionResult<IEnumerable<AccountInfo>> Get()

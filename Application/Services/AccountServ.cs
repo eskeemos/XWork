@@ -3,6 +3,7 @@ using Application.Dtos.AccountDtos;
 using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
+using Domain.Entities.Helpers;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -50,9 +51,9 @@ namespace Application.Services
             return id;
         }
 
-        public string GenerateJwt(AccountLogin dto)
+        LogData ISAccount.LogToAccount(AccountLogin dto)
         {
-            return repo.GetJwt(mapper.Map<Account>(dto));
+            return repo.Login(mapper.Map<Account>(dto));
         }
     }
 }
