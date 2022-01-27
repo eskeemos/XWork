@@ -1,9 +1,0 @@
-.loggedtext{
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 100px;
-    color: grey;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
-}

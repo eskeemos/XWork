@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fcZ75y8ipmVUEk6Zvfo+PWina1ciPVZufHwbqCtosmmU/YHHF+LwfPcsx42SttiztddD1t/YuLdBa+3P6ZABxw==",
+  "dgSpecHash": "qRsq8HmDIopJNPLGPDbapljMGQMxXBK37n2ojZKcdiujY7Jz4GHikc3XMG+QmHAwyKIKG8ApxI8Z42BxFKkSVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lukasz\\source\\repos\\XWork\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Lukasz\\Desktop\\XWork\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

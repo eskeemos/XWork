@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lukasz\\source\\repos\\XWork\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Lukasz\\Desktop\\XWork\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\Lukasz\\source\\repos\\XWork\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\Lukasz\\Desktop\\XWork\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Lukasz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lukasz\\source\\repos\\XWork\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\Lukasz\\Desktop\\XWork\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lukasz\\AppData\\Roaming\\NuGet\\NuGet.Config",

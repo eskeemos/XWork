@@ -27,7 +27,7 @@ namespace XWork.Seeders
                     context.Role.AddRange(roles);
                     context.SaveChanges();
                 }
-                if (context.Account.SingleOrDefault(x => x.Email == "admin") == null)
+                if (context.Account.SingleOrDefault(x => x.Email == "admin@wp.pl") is null)
                 {
                     var admin = GetAdmin();
                     context.Account.Add(admin);

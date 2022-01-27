@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L08ha2LVseyntx6anU2Grslr1PHw4uEX2k6vXrLcMttdfHX6Nuk+qIxCD3TMYz11vrQrzWIZiJo8JgHD8NMtdw==",
+  "dgSpecHash": "dmymaB/hvr2sc6NXxIx5IK7IjH7i2CfHwx3k7pjpgCM2pKXXxB7hQjhm6YO9H5AOLHc6WOeqQr2RhSjIAzVIvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lukasz\\source\\repos\\XWork\\Infrastucture\\Infrastucture.csproj",
+  "projectFilePath": "C:\\Users\\Lukasz\\Desktop\\XWork\\Infrastucture\\Infrastucture.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lukasz\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Lukasz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

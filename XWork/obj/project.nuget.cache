@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sP7QFYEigHk4pgeqFLWhK9GV4Tz/WGII+Okb3khlKTxeOoWZYdiRp5alG691YY4RiPY8PY+wRypuJYBF7Xpt0A==",
+  "dgSpecHash": "nqU+F+VVOVmcC7BG58cUGE7ZviCKcVjnRGameh/yR+rrOx8qMu9jblo2SNgIAP/pogX5aEi7volFA8cqE+C3ow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lukasz\\source\\repos\\XWork\\XWork\\XWork.csproj",
+  "projectFilePath": "C:\\Users\\Lukasz\\Desktop\\XWork\\XWork\\XWork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lukasz\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Lukasz\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
