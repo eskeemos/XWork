@@ -44,6 +44,9 @@ namespace Infrastucture.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ZusStatementId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("LocationId");
@@ -51,6 +54,8 @@ namespace Infrastucture.Migrations
                     b.HasIndex("PersonalDataId");
 
                     b.HasIndex("RoleId");
+
+                    b.HasIndex("ZusStatementId");
 
                     b.ToTable("Account");
                 });
@@ -133,6 +138,36 @@ namespace Infrastucture.Migrations
                     b.ToTable("Role");
                 });
 
+            modelBuilder.Entity("Domain.Entities.ZusStatement", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("HasCompany")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsEmployed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsInsured")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPensioner")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRetired")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsStudent")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ZusStatement");
+                });
+
             modelBuilder.Entity("Domain.Entities.Account", b =>
                 {
                     b.HasOne("Domain.Entities.Location", "Location")
@@ -153,11 +188,19 @@ namespace Infrastucture.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.Entities.ZusStatement", "ZusStatement")
+                        .WithMany()
+                        .HasForeignKey("ZusStatementId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Location");
 
                     b.Navigation("PersonalData");
 
                     b.Navigation("Role");
+
+                    b.Navigation("ZusStatement");
                 });
 #pragma warning restore 612, 618
         }

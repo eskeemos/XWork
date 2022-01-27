@@ -56,9 +56,10 @@ namespace XWork.Seeders
         {
             var account = new Account()
             {
-                Email = "admin",
+                Email = "admin@wp.pl",
                 Password = "admin123",
                 Location = new Location(),
+                ZusStatement = new ZusStatement(),
                 PersonalData = new PersonalData() { Name = "Admin" },
                 RoleId = 2
             };

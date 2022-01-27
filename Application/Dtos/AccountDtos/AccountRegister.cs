@@ -13,7 +13,8 @@ namespace Application.Dtos.AccountDtos
         public void Mapping(Profile profile)
         {
             profile.CreateMap<AccountRegister, Account>()
-                .ForMember(x => x.Location, x => x.MapFrom(x => new Location()))
+                .ForMember(x => x.PersonalData, x => x.MapFrom(x => new PersonalData()))
+                .ForMember(x => x.ZusStatement, x => x.MapFrom(x => new ZusStatement()))
                 .ForMember(x => x.PersonalData, x => x.MapFrom(x => new PersonalData()));
         }
     }

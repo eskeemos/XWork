@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastucture.Migrations
 {
-    public partial class Inits : Migration
+    public partial class qwe : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,6 +45,37 @@ namespace Infrastucture.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Role",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Role", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ZusStatement",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IsStudent = table.Column<bool>(type: "bit", nullable: false),
+                    IsEmployed = table.Column<bool>(type: "bit", nullable: false),
+                    IsRetired = table.Column<bool>(type: "bit", nullable: false),
+                    IsPensioner = table.Column<bool>(type: "bit", nullable: false),
+                    HasCompany = table.Column<bool>(type: "bit", nullable: false),
+                    IsInsured = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ZusStatement", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Account",
                 columns: table => new
                 {
@@ -51,8 +83,11 @@ namespace Infrastucture.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
                     PersonalDataId = table.Column<int>(type: "int", nullable: false),
-                    LocationId = table.Column<int>(type: "int", nullable: false)
+                    LocationId = table.Column<int>(type: "int", nullable: false),
+                    ZusStatementId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -69,6 +104,18 @@ namespace Infrastucture.Migrations
                         principalTable: "PersonalData",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Account_Role_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Role",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Account_ZusStatement_ZusStatementId",
+                        column: x => x.ZusStatementId,
+                        principalTable: "ZusStatement",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -80,6 +127,16 @@ namespace Infrastucture.Migrations
                 name: "IX_Account_PersonalDataId",
                 table: "Account",
                 column: "PersonalDataId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Account_RoleId",
+                table: "Account",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Account_ZusStatementId",
+                table: "Account",
+                column: "ZusStatementId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -92,6 +149,12 @@ namespace Infrastucture.Migrations
 
             migrationBuilder.DropTable(
                 name: "PersonalData");
+
+            migrationBuilder.DropTable(
+                name: "Role");
+
+            migrationBuilder.DropTable(
+                name: "ZusStatement");
         }
     }
 }

@@ -14,5 +14,7 @@ namespace Domain.Entities
         public virtual PersonalData PersonalData { get; set; }
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
+        public int ZusStatementId { get; set; }
+        public virtual ZusStatement ZusStatement { get; set; }
     }
 }

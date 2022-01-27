@@ -13,6 +13,7 @@ namespace Application.Dtos.AccountDtos
         public DateTime? BirthDate { get; set; }
         public int PersonalDataId { get; set; }
         public int LocationId { get; set; }
+        public int ZusStatementId { get; set; }
 
         public void Mapping(Profile profile)
         {
