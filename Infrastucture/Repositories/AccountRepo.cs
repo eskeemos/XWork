@@ -31,16 +31,12 @@ namespace Infrastucture.Repositories
         public IEnumerable<Account> Get()
         {
             return context.Account
-                .Include(x => x.PersonalData)
-                .Include(x => x.Location)
                 .ToList();
         }
 
         public Account GetById(int id)
         {
             return context.Account
-                .Include(x => x.PersonalData)
-                .Include(x => x.Location)
                 .SingleOrDefault(x => x.Id == id);
         }
 
@@ -81,8 +77,10 @@ namespace Infrastucture.Repositories
                 .Include(x => x.PersonalData)
                 .SingleOrDefault(x => x.Email == account.Email)
                 .PersonalData.Name;
+            var RoleId = context.Account
+                .SingleOrDefault(x => x.Email == account.Email).RoleId;
 
-            return new LogData() { Id = Id, JWT = JWT, Name = Name };
+            return new LogData() { Id = Id, JWT = JWT, RoleId = RoleId, Name = Name };
         }
 
         public int Post(Account account)

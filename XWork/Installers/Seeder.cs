@@ -8,7 +8,7 @@ namespace XWork.Installers
     {
         public void InstallServ(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<RoleSeeder>();
+            services.AddScoped<DataSeed>();
         }
     }
 }

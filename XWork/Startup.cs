@@ -26,7 +26,7 @@ namespace XWork
         }   
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleSeeder roles)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataSeed roles)
         {
             roles.Seed();
             if (env.IsDevelopment())
