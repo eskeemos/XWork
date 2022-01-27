@@ -1,0 +1,78 @@
+/* header{
+    border-bottom: solid lightgrey 1px;
+    height: 70px;
+    background-color: white;
+    z-index:4;
+    position: fixed;
+    width: 100%;
+}
+#navbar{
+    text-align: right;
+}
+.navbutton{
+    transition: 0.5s;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: white solid 1px;
+}
+.navbutton:hover{
+    border-color: lightgray;
+} */
+#startTitle{
+    text-align: center;
+    font-size: 100px;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.startLetters{
+    float: left;
+}
+#X{
+    color: black;
+}
+#work{
+    color: #0076fd;
+}
+#line2{
+    border-bottom: solid lightgrey 1px;
+    margin-top: 260px;
+}
+.startText{
+    color: darkgrey;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+    text-align: center;
+    font-size: 25px;
+}
+.startbutton{
+    transition: 0.3s;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: #0076fd;
+    color: white;
+    width: 300px;
+    float: left;
+    text-align: center;
+    margin-top: 0px;
+    box-shadow:2px 2px 2px #999999;
+
+}
+.startbutton:hover{
+    background-color: #0053b3;
+    margin-top: -2px;
+}
+#buttonHolder{
+    position: absolute;
+    left: 50%;
+    top: 450px;
+    transform: translate(-50%, 0);
+}

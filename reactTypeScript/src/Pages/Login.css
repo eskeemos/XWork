@@ -1,0 +1,88 @@
+
+#loginContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    border: solid lightgrey 1px;
+    height: 420px;
+    text-align: center;
+    font-family: sans-serif;
+    box-shadow:2px 2px 2px #999999;
+}
+/* #loginPage{
+    height: 99%;
+    width: 600px;
+    border: solid lightgrey 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:2px 2px 2px #aaaaaa;
+    background: white;
+} */
+#email, #password{
+    width: 300px;
+}
+#button {
+    height: 50px;
+    width: 328px;
+}
+#linia{
+    border-bottom: solid lightgrey 1px;
+}
+#loginicon{
+    width: 120px;
+    height: 120px;
+    background-color: #0076fd;
+    border-radius: 60px;
+    margin-top: -130px;
+    margin-left: 140px;
+    margin-bottom: 25px;
+    box-shadow:2px 2px 2px #666666;
+}
+#head{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 40px;
+    background-color: white;
+    box-shadow:2px 2px 2px #0158bd;
+}
+#arms{
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 25px;
+    background-color: white;
+    margin-top: 5px;
+    box-shadow:2px 2px 2px #0158bd;
+}
+#empty{
+    height: 12px;
+}
+.backGroundImage{
+    position: absolute;
+    width: 50%;
+    bottom: 0%;
+    right: 50%;
+}
+#border{
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    border-left: solid lightgrey 1px;;
+    
+}
+#backgroundlogin{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: #dddddd;
+}
