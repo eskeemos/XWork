@@ -20,7 +20,7 @@ namespace Application.Services
         public PersonalDataDto GetPDById(int id)
         {
             return mapper.Map<PersonalDataDto>(repo.GetById(id));
-        }
+        } 
 
         public void UpdatePD(UpdatePersonalDataDto personalData)
         {

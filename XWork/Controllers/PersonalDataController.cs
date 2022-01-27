@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace XWork.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class PersonalDataController : ControllerBase
     {
@@ -15,7 +16,7 @@ namespace XWork.Controllers
         {
             this.serv = serv;
         }
-        [HttpGet("{id}")]
+        [HttpGet("{id}")] 
         public ActionResult<PersonalDataDto> GetById([FromRoute] int id)
         {
             var data = serv.GetPDById(id);

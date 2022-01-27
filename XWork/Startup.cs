@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using XWork.Installers;
 using XWork.Seeders;
 
@@ -26,9 +24,10 @@ namespace XWork
         }   
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataSeed roles)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataSeed data)
         {
-            roles.Seed();
+            data.Seed();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -40,9 +39,13 @@ namespace XWork
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader());
+
             app.UseAuthentication();
+
             app.UseHttpsRedirection();
+
             app.UseRouting();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

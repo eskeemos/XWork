@@ -1,10 +1,12 @@
 ﻿using Application.Dtos.ZusStatementDtos;
 using Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace XWork.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class ZusStatementController : ControllerBase
     {
@@ -14,7 +16,7 @@ namespace XWork.Controllers
         {
             this.serv = serv;
         }
-        [HttpGet("{id}")]
+        [HttpGet("{id}")] 
         public IActionResult GetZusStatement([FromRoute] int id)
         {
             var x = serv.GetZusStatementById(id);

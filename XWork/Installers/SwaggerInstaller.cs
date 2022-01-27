@@ -4,7 +4,7 @@ using Microsoft.OpenApi.Models;
 
 namespace XWork.Installers
 {
-    public class SwaggerInstaller : IInstaller
+    public class SwaggerInstaller : IInstaller  
     {
         public void InstallServ(IServiceCollection services, IConfiguration configuration)
         {

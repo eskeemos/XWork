@@ -5,6 +5,6 @@ namespace Domain.Interfaces
     public interface IRLocation
     {
         Location GetById(int id);
-        void Update(Location location);
+        void Update(Location location); 
     }
 }

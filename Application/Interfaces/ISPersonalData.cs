@@ -5,6 +5,6 @@ namespace Application.Interfaces
     public interface ISPersonalData
     {
         PersonalDataDto GetPDById(int id);
-        void UpdatePD(UpdatePersonalDataDto personalData);
+        void UpdatePD(UpdatePersonalDataDto dto);   
     }
 }

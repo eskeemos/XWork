@@ -11,7 +11,7 @@ namespace Application.Services
         private readonly IRZusStatement repo;
         private readonly IMapper mapper;
 
-        public ZusStatementServ(IRZusStatement repo, IMapper mapper)
+        public ZusStatementServ(IRZusStatement repo, IMapper mapper) 
         {
             this.repo = repo;
             this.mapper = mapper;

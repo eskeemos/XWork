@@ -8,7 +8,7 @@ namespace Application.Interfaces
     {
         IEnumerable<AccountInfo> GetAccounts();
         AccountInfo GetAccountById(int id);
-        void UpdateAccount(AccountUpdate location);
+        void UpdateAccount(AccountUpdate dto);  
         void RemoveAccount(int id);
         int PostUser(AccountRegister dto);
         LogData LogToAccount(AccountLogin dto);

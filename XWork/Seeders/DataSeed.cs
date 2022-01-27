@@ -63,8 +63,9 @@ namespace XWork.Seeders
                 PersonalData = new PersonalData() { Name = "Admin" },
                 RoleId = 2
             };
-            var hashedPassword = hasher.HashPassword(account, account.Password);
-            account.Password = hashedPassword;
+
+            account.Password = hasher.HashPassword(account, account.Password);
+
             return account;
         }
     }

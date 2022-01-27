@@ -10,7 +10,7 @@ namespace Infrastucture.Repositories
         private readonly Context context;
         public LocationRepo(Context context)
         {
-            this.context = context;
+            this.context = context; 
         }
 
         public Location GetById(int id)

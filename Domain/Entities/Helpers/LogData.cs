@@ -6,6 +6,6 @@
         public string JWT { get; set; }
         public int RoleId { get; set; }
         public string Name { get; set; }
-        public string Error { get; set; }
+        public string Error { get; set; } 
     }
 }

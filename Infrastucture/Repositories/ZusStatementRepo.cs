@@ -20,7 +20,7 @@ namespace Infrastucture.Repositories
         public void Update(ZusStatement zusStatement)
         {
             context.ZusStatement.Update(zusStatement);
-            context.SaveChanges();
+            context.SaveChanges(); 
         }
     }
 }

@@ -8,9 +8,9 @@ namespace Domain.Interfaces
     {
         IEnumerable<Account> Get();
         Account GetById(int id);
-        void Update(Account client);
+        void Update(Account account);
         void Remove(int id);
-        int Post(Account user);
-        LogData Login(Account user);
+        int Post(Account account);
+        LogData Login(Account account);
     }
 }

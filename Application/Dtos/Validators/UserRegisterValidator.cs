@@ -14,7 +14,7 @@ namespace Application.Dtos.Validators
                 {
                     if(context.Account.Any(x => x.Email == v))
                     {
-                        c.AddFailure("Email", "This email is already in use");
+                        c.AddFailure("Email", "This email is already in use"); 
                     }
                 });
         }

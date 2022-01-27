@@ -16,7 +16,7 @@ namespace Application.Services
     public class AccountServ : ISAccount
     {
         private readonly IRAccount repo;
-        private readonly IMapper mapper;
+        private readonly IMapper mapper; 
 
         public AccountServ(IRAccount repo, IMapper mapper)
         {

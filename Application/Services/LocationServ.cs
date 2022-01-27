@@ -14,7 +14,7 @@ namespace Application.Services
         public LocationServ(IRLocation repo, IMapper mapper)
         {
             this.mapper = mapper;
-            this.repo = repo;
+            this.repo = repo; 
         }
 
         public LocationDto GetLocationById(int id)

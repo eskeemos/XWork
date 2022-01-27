@@ -16,7 +16,7 @@ namespace XWork.Controllers
         {
             this.serv = serv;
         }
-
+         
         [HttpGet("{id}")]
         public ActionResult<LocationDto> GetById([FromRoute] int id)
         {

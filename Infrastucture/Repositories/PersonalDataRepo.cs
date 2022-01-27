@@ -21,7 +21,7 @@ namespace Infrastucture.Repositories
         }
 
         public PersonalData GetById(int id)
-        {
+        { 
             return context.PersonalData.SingleOrDefault(x => x.Id == id);
         }
 

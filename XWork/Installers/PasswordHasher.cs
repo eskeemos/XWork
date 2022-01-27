@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace XWork.Installers
 {
-    public class PasswordHasher : IInstaller
+    public class PasswordHasher : IInstaller    
     {
         public void InstallServ(IServiceCollection services, IConfiguration configuration)
         {

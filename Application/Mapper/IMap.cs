@@ -4,6 +4,6 @@ namespace Application.Mapper
 {
     public interface IMap
     {
-        void Mapping(Profile profile);
+        void Mapping(Profile profile); 
     }
 }

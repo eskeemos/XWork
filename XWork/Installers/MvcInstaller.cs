@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace XWork.Installers
 {
-    public class MvcInstaller : IInstaller
+    public class MvcInstaller : IInstaller  
     {
         public void InstallServ(IServiceCollection services, IConfiguration configuration)
         {

@@ -9,7 +9,7 @@ namespace Application.Dtos.AccountDtos
     {
         public string Email { get; set; }
         public string Password { get; set; }
-        public DateTime? BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; } 
         public void Mapping(Profile profile)
         {
             profile.CreateMap<AccountRegister, Account>()

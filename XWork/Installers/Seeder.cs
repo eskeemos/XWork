@@ -4,7 +4,7 @@ using XWork.Seeders;
 
 namespace XWork.Installers
 {
-    public class Seeder : IInstaller
+    public class Seeder : IInstaller    
     {
         public void InstallServ(IServiceCollection services, IConfiguration configuration)
         {

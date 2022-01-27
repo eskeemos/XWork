@@ -3,7 +3,7 @@
     public class Auth
     {
         public string JwtKey { get; set; }
-        public int ExpireDays { get; set; }
-        public string Issuer { get; set; }
+        public int JwtExpire { get; set; }
+        public string JwtIssuer { get; set; }
     }
 }

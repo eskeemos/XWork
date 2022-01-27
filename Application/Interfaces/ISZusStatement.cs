@@ -5,6 +5,6 @@ namespace Application.Interfaces
     public interface ISZusStatement
     {
         ZusStatementDto GetZusStatementById(int id);
-        void UpdateZusStatement(UpdateZusStatementDto location);
+        void UpdateZusStatement(UpdateZusStatementDto dto); 
     }
 }

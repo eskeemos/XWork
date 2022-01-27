@@ -25,8 +25,8 @@ namespace XWork.Installers
                 x.SaveToken = true;
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidIssuer = auth.Issuer,
-                    ValidAudience = auth.Issuer,
+                    ValidIssuer = auth.JwtIssuer,
+                    ValidAudience = auth.JwtIssuer,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(auth.JwtKey))
                 };
             });

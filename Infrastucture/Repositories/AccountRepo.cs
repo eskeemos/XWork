@@ -15,7 +15,7 @@ using System.Text;
 
 namespace Infrastucture.Repositories
 {
-    public class AccountRepo : IRAccount
+    public class AccountRepo : IRAccount 
     {
         private readonly Context context;
         private readonly IPasswordHasher<Account> hasher;

@@ -28,7 +28,7 @@ namespace XWork.Controllers
         {
             var data = serv.LogToAccount(dto);
             return Ok(data);
-        }
+        } 
         [HttpGet]
         public ActionResult<IEnumerable<AccountInfo>> Get()
         {

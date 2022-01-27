@@ -1,6 +1,6 @@
 ﻿namespace Domain.Entities
 {
-    public class ZusStatement
+    public class ZusStatement 
     {
         public int Id { get; set; }
         public bool IsStudent { get; set; }

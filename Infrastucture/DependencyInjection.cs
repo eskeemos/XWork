@@ -12,6 +12,7 @@ namespace Infrastucture
             services.AddScoped<IRLocation, LocationRepo>();
             services.AddScoped<IRAccount, AccountRepo>();
             services.AddScoped<IRZusStatement, ZusStatementRepo>();
+
             return services;
         }
     }
