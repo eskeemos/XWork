@@ -59,11 +59,11 @@ namespace Infrastucture.Repositories
             var cfg = configuration.GetSection("Authentication");
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(cfg["JwtKey"]));
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expires = DateTime.Now.AddDays(int.Parse(cfg["ExpireDays"].ToString()));
+            var expires = DateTime.Now.AddDays(int.Parse(cfg["JwtExpire"].ToString()));
 
             var token = new JwtSecurityToken(
-                cfg["Issuer"],
-                cfg["Issuer"],
+                cfg["JwtIssuer"],
+                cfg["JwtIssuer"],
                 claims,
                 expires: expires,
                 signingCredentials: cred);
